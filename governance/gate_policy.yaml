@@ -1,0 +1,25 @@
+version: "1"
+
+# Missing or malformed test evidence must remain visible for this high-risk
+# promotion pipeline. This policy does not turn the framework into a security
+# boundary and does not prove domain correctness.
+fail_mode: strict
+
+blocking_actions:
+  - production_fix_required
+
+unknown_treatment:
+  mode: block_if_count_exceeds
+  threshold: 3
+
+artifact_stale_seconds: 86400
+
+canonical_audit_trend:
+  window_size: 20
+  signal_threshold_ratio: 0.5
+
+skip_test_result_check: false
+
+# Git hooks are installed locally. Automatic agent session-end wiring has not
+# been demonstrated in this repository, so do not claim Tier A or Tier B.
+hook_coverage_tier: C
