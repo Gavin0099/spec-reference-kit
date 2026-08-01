@@ -9,6 +9,8 @@ on:
       - "AGENTS.md"
       - "PLAN.md"
       - "contract.yaml"
+      - ".gitmodules"
+      - "ai-governance-framework"
       - "governance/**"
   pull_request:
     branches: [main]
@@ -18,6 +20,8 @@ on:
       - "AGENTS.md"
       - "PLAN.md"
       - "contract.yaml"
+      - ".gitmodules"
+      - "ai-governance-framework"
       - "governance/**"
   workflow_dispatch:
 
@@ -36,7 +40,7 @@ jobs:
 
       - name: Run governance drift check
         run: |
-          python governance/governance_tools/governance_drift_checker.py \
+          python ai-governance-framework/governance_tools/governance_drift_checker.py \
             --repo . \
-            --framework-root governance \
+            --framework-root ./ai-governance-framework \
             --format human

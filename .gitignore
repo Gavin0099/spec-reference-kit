@@ -21,6 +21,11 @@ artifacts/*.db
 vault/
 source-vault/
 sources/raw/
+# Permit only the synthetic public Source Vault fixture used by CI. Keep the
+# exception deliberately narrow so real internal specifications stay ignored.
+!tests/fixtures/vault/
+!tests/fixtures/vault/DEMO-SPEC-001/
+!tests/fixtures/vault/DEMO-SPEC-001/source.txt
 *.pdf
 *.doc
 *.docx
