@@ -1,0 +1,11 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: Governed Surface Manifest
+type: object
+required:
+  - schema_version
+  - manifest_id
+  - manifest_version
+  - authority_surface
+  - governed_tables
+  - consumer_usage
+

@@ -1,0 +1,19 @@
+schema_version: "0.1"
+proposal_write_surface: proposals/
+canonical_write_surface: tables/
+review_receipt_surface: evidence/review_packets/
+requirements:
+  reviewer_type: human
+  decision: approved
+  proposal_status: proposed
+  proposal_eligible_for_promotion: false
+  source_fingerprint_match: true
+  extraction_receipt_match: true
+  proposal_fingerprint_match: true
+non_claims:
+  - firmware_implementation_correct
+  - silicon_runtime_behavior_verified
+  - certification_passed
+  - customer_acceptance
+  - applicability_outside_declared_scope
+

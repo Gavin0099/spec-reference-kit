@@ -1,0 +1,8 @@
+SYNTHETIC FIXTURE — NOT A REAL SPECIFICATION
+
+Fictional Device Register Table 8-12
+Address 0x0082, bit 3: DEMO_FAST_UPDATE
+0 = disabled
+1 = enabled
+Scope: fictional revisions A1 and B0 only.
+

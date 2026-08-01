@@ -1,0 +1,4 @@
+schema_version: "0.1"
+table_id: demo_register_matrix
+entry_type: register_bit
+entries: []

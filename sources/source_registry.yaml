@@ -1,0 +1,18 @@
+schema_version: "0.1"
+sources:
+  - source_id: demo_internal_spec_r1_0
+    title: Synthetic Internal Specification Fixture
+    document_type: internal_normative_spec
+    product_scope:
+      - DEMO-CHIP
+    revision: "1.0"
+    effective_date: "2026-08-01"
+    locator:
+      type: vault_artifact
+      artifact_id: DEMO-SPEC-001
+      artifact_path: DEMO-SPEC-001/source.txt
+      artifact_sha256: da39f2111929fe3250a262d70eedad00d71e5f07cf2498f8fefb80e72da89c4e
+    authority_level: internal_normative
+    classification: synthetic_public_fixture
+    supersedes: []
+    review_owner: demo_domain_reviewer

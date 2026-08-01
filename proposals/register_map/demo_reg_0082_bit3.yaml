@@ -1,0 +1,35 @@
+schema_version: "0.1"
+entry_id: demo_reg_0082_bit3
+topic: register_bit
+claim:
+  register: "0x0082"
+  bit_range: "3"
+  name: DEMO_FAST_UPDATE
+  encoding:
+    "0": disabled
+    "1": enabled
+authority:
+  level: internal_normative
+  product_scope:
+    - DEMO-CHIP
+  silicon_revision_scope:
+    - A1
+    - B0
+source:
+  source_id: demo_internal_spec_r1_0
+  artifact_sha256: da39f2111929fe3250a262d70eedad00d71e5f07cf2498f8fefb80e72da89c4e
+  section: "8.4.2"
+  page: 137
+  table: "Table 8-12"
+  extraction_receipt_id: EXTRACT-DEMO-0001
+  extracted_surface_sha256: e46753f18033bda0be3432cbef7b28e53642caeb019ef1b8d4e04606d8fb7c04
+verification_scope:
+  claim: register_bit_name_position_and_encoding_only
+  excludes:
+    - runtime_side_effect
+    - initialization_timing
+    - firmware_implementation_correctness
+    - unsupported_silicon_revisions
+review:
+  status: proposed
+  eligible_for_promotion: false
