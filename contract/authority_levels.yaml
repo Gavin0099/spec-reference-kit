@@ -1,0 +1,19 @@
+schema_version: "0.1"
+levels:
+  - internal_normative
+  - internal_errata
+  - customer_requirement
+  - validation_observation
+  - engineering_note
+review_statuses:
+  - proposed
+  - validator_passed
+  - reviewed
+  - approved
+  - rejected
+  - superseded
+precedence_note: >-
+  Precedence between base specifications, errata, change notices, customer
+  requirements, and engineering notes must be decided in each private content
+  repository. This template does not guess it.
+

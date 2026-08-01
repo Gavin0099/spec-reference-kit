@@ -1,0 +1,24 @@
+schema_version: '0.1'
+manifest_id: spec_reference_kit_demo
+manifest_version: '0.1'
+authority_surface:
+  product: DEMO-CHIP
+  source_revision: '1.0'
+  state: pilot
+governed_tables:
+- id: demo_register_matrix
+  path: tables/register_matrix.yaml
+  schema: contract/register_entry.schema.yaml
+  state: partial
+  approved_entries: 1
+  sha256: f212a70b2b21ddd8892041c3a2a510e8c6973ff9d5f453a54e7b1c660181735c
+consumer_usage:
+  allowed:
+  - register_identity_lookup
+  - bit_encoding_lookup
+  - revision_scope_lookup
+  forbidden:
+  - infer_runtime_behavior
+  - infer_firmware_support
+  - override_customer_specific_requirement
+  - treat_engineering_note_as_normative

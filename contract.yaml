@@ -3,10 +3,13 @@ plugin_version: "1.0.0"
 framework_interface_version: "1"
 framework_compatible: ">=1.0.0,<2.0.0"
 domain: specification-reference-governance
-risk_posture: high-for-promotion-and-authority-paths
+risk_tier: high
 documents:
   - AGENTS.base.md
   - PLAN.md
+  - README.md
+  - docs/data-flow.md
+  - docs/internal-adoption.md
   - governance/TESTING.md
   - governance/ARCHITECTURE.md
 ai_behavior_override:
@@ -14,3 +17,4 @@ ai_behavior_override:
 rule_roots:
   - governance/rules
 validators:
+  - scripts/validate_repository.py

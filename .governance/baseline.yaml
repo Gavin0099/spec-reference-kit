@@ -11,9 +11,9 @@
 # ── PROVENANCE ────────────────────────────────────────────────────────────────
 schema_version: "1"
 baseline_version: 1.0.0
-source_commit: d539cc6e8917ba0557a3fc9dd7d59ed85a70c338
+source_commit: 234e73ca30a1efb54aa575ad8e202d2f7e4de5d6
 framework_root: /workspace/scratch/f9714cb07430/spec-reference-kit/ai-governance-framework
-initialized_at: 2026-08-01T06:46:03Z
+initialized_at: 2026-08-01T06:58:22Z
 initialized_by: governance_tools/adopt_governance.py
 
 # ── INTEGRITY ─────────────────────────────────────────────────────────────────
@@ -21,7 +21,7 @@ initialized_by: governance_tools/adopt_governance.py
 # overridable.<file>: protected = must not change | overridable = repo may extend freely
 sha256.AGENTS.base.md: 438df8bb196625588b0965fcd5ec75e8e36f387afcdcb0964098cce48cca6f5a
 sha256.PLAN.md: 60a92b460dfa2bb7ed8b8aeb90c7a0dcd24af7f440b181703ed1c35698f51467
-sha256.contract.yaml: 03153187380e3daf06f31a5851388dfe2a662a501999f61261e4d7861997e56c
+sha256.contract.yaml: f2e36ce89c914156d84f2599ad7d049570e3743e22402440ba9e75a039695709
 sha256.AGENTS.md: 405fc12262b80688dcbc2a156c7d5bbb6cf4b9d5740b0cf4cb1b3313e1d9225d
 overridable.AGENTS.base.md: protected
 overridable.PLAN.md: overridable

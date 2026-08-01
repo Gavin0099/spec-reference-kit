@@ -1,0 +1,22 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: Register Bit Proposal
+type: object
+required:
+  - schema_version
+  - entry_id
+  - topic
+  - claim
+  - authority
+  - source
+  - verification_scope
+  - review
+properties:
+  schema_version: {const: "0.1"}
+  topic: {const: register_bit}
+  entry_id: {type: string}
+  claim: {type: object}
+  authority: {type: object}
+  source: {type: object}
+  verification_scope: {type: object}
+  review: {type: object}
+

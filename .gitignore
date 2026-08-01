@@ -16,3 +16,15 @@ artifacts/*.db
 **/artifacts/governance/version_compatibility.json
 **/artifacts/*.db
 # <<< ai-governance hygiene (managed) <<<
+
+# Raw controlled specifications belong in the external Source Vault.
+vault/
+source-vault/
+sources/raw/
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+.venv/
+wheelhouse/

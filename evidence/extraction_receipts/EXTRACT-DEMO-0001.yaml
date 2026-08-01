@@ -1,0 +1,13 @@
+schema_version: "0.1"
+receipt_id: EXTRACT-DEMO-0001
+source_id: demo_internal_spec_r1_0
+artifact_sha256: da39f2111929fe3250a262d70eedad00d71e5f07cf2498f8fefb80e72da89c4e
+locator:
+  section: "8.4.2"
+  page: 137
+  table: "Table 8-12"
+extracted_surface_sha256: e46753f18033bda0be3432cbef7b28e53642caeb019ef1b8d4e04606d8fb7c04
+extractor:
+  kind: deterministic_text_fixture
+  name: fixture-loader
+extracted_at: "2026-08-01T00:00:00Z"

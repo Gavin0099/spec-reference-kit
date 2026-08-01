@@ -1,0 +1,14 @@
+schema_version: "0.1"
+receipt_id: REV-DEMO-0001
+proposal_id: demo_reg_0082_bit3
+proposal_sha256: cdbc75b2f714650f10bb406551ce7a5db1721178907e1a9742add1c9ab282b49
+reviewer_id: demo_human_reviewer
+reviewer_type: human
+decision: approved
+source_checked: true
+scope_checked: true
+reviewed_at: "2026-08-01T00:00:00Z"
+attestation: >-
+  Synthetic demonstration review only; source locator, extracted claim, scope,
+  and explicit exclusions were checked against the fictional fixture.
+
