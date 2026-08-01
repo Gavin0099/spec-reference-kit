@@ -12,7 +12,8 @@
 
 <!-- Required: fill in current phase ID and description -->
 
-- [>] Phase A: Governance bootstrap and synthetic vertical slice
+- [x] Phase A: Governance bootstrap and synthetic vertical slice
+- [ ] Phase B: Disconnected internal pilot with 20–50 reviewed entries
 
 ## Active Sprint
 
@@ -20,8 +21,8 @@
 
 - [x] Add the canonical AI Governance Framework as a pinned submodule.
 - [x] Adopt the repo-owned governance baseline and classify promotion paths as high risk.
-- [ ] Complete the governed F-7 onboarding surfaces and evidence.
-- [ ] Deliver one synthetic source-to-approved-reference vertical slice.
+- [x] Complete the governed F-7 onboarding surfaces and evidence.
+- [x] Deliver one synthetic source-to-approved-reference vertical slice.
 
 ## Backlog
 
@@ -41,6 +42,8 @@
   source identities, locators, hashes, bounded extracts, and approved claims.
 - 2026-08-01: v0.1 is one synthetic register-bit vertical slice. YAML remains
   canonical; Markdown and the manifest are deterministic projections.
+- 2026-08-01: Reject duplicate YAML keys rather than accepting PyYAML's default
+  last-value-wins behavior; silent overwrite is incompatible with reviewable truth.
 
 ## Known Risks
 
@@ -52,3 +55,6 @@
   Mitigation: document a two-bundle or internal-mirror import path before v0.1 release.
 - Schema breadth can displace product utility. Mitigation: stop after one entry
   type until a real internal pilot identifies the next required type.
+- Human review receipts are attestations, not cryptographic identity proof.
+  Mitigation: rely on internal Git identity/branch protection for the pilot and
+  evaluate signed receipts only if a real impersonation or audit gap is observed.

@@ -2,12 +2,14 @@
 
 ## Current Status
 
-- AI Governance baseline adopted from the pinned in-repo submodule.
-- Repo-specific risk, test, escalation, and forbidden-behavior rules defined.
-- Current DONE: one synthetic source-to-approved-reference vertical slice with
-  offline validation and no confidential content.
+- Phase A complete at implementation commit `b6162f2`: governed onboarding plus
+  one synthetic source-to-approved-reference vertical slice.
+- Static governance maturity is `full_candidate`; runtime enforcement across
+  machines and domain correctness remain unclaimed.
 
 ## Next Steps
 
-- Complete F-7 onboarding evidence without mixing product implementation scope.
-- Implement and validate the bounded v0.1 vertical slice.
+- Import the kit into a disconnected internal test environment.
+- Pilot one low-ambiguity table with 20–50 reviewed internal entries.
+- Measure extraction errors, review time, and revision/supersedence friction
+  before adding another entry type.
