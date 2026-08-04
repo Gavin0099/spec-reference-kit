@@ -15,10 +15,34 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: python -m pip install --requirement requirements.txt
+      - name: Validate governance wiring and memory closeout
+        env:
+          PYTHONPATH: ai-governance-framework
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_REF="${{ github.event.pull_request.base.sha }}"
+          elif [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            BASE_REF="${{ github.event.before }}"
+          else
+            BASE_REF="HEAD~1"
+          fi
+          python -m governance_tools.hook_install_validator --repo .
+          python -m governance_tools.ci_memory_workflow_check \
+            --project-root . \
+            --base-ref "$BASE_REF" \
+            --head-ref "${{ github.sha }}" \
+            --format human
+          python -m governance_tools.memory_workflow \
+            --check \
+            --repo . \
+            --run-guard \
+            --fail-on-blocker
       - run: python scripts/validate_repository.py --repo . --check-generated
       - run: >-
           python scripts/probe_fingerprint.py

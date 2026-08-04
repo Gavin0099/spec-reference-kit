@@ -324,6 +324,13 @@ NOT CLAIMED unless separately implemented and validated:
 - For memory completion claims, run `python -m governance_tools.memory_workflow --check --repo . --run-guard` and report blockers before claiming DONE.
 - Use the canonical memory writer for session-derived memory; do not edit memory records as ordinary markdown.
 - Canonical writer signal: `governance_tools.memory_record` / `memory_record.py`.
+- For a non-stateless implementation closeout, create durable test receipts first,
+  then invoke the canonical writer, commit the implementation and memory as
+  separate commits, and only then push. The parent CI memory gate blocks a
+  commit date that has no canonical daily memory record.
+- Treat `.github/hooks/` as wiring only. Verify actual lifecycle installation
+  with `python -m governance_tools.hook_install_validator --repo .`; the CI gate
+  remains the fallback when a platform does not load `session_end`.
 
 ## Repo-Specific Risk Levels
 <!-- governance:key=risk_levels -->

@@ -1,0 +1,10 @@
+{
+  "policy_schema": "memory_blocking_policy.v0.1",
+  "enabled": true,
+  "blocking_codes": [
+    "missing_canonical_memory"
+  ],
+  "activated_on": "2026-08-04",
+  "authority": "AGENTS.md AI Governance Memory Workflow Router and parent CI memory gate",
+  "scope_note": "Consumer-repo policy: a commit date with no canonical daily memory record blocks the CI memory gate. Other historical evidence warnings remain report-only."
+}
