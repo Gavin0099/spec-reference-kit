@@ -3,14 +3,14 @@
   "receipt_type": "ai_governance_update",
   "tool": "external_governance_submodule_updater",
   "tool_mode": "apply",
-  "repo_root": "/workspace/scratch/f9714cb07430/spec-reference-kit",
-  "framework_root": "/workspace/scratch/f9714cb07430/spec-reference-kit/ai-governance-framework",
+  "repo_root": "E:\\BackUp\\Git_EE\\spec-reference-kit",
+  "framework_root": "E:\\BackUp\\Git_EE\\spec-reference-kit\\ai-governance-framework",
   "framework_before": "61111f5fa732b61a12c38ff0b2c0f6e3b4cde287",
-  "framework_after": "61111f5fa732b61a12c38ff0b2c0f6e3b4cde287",
-  "lock_adopted_commit": null,
-  "lock_matches_checkout": false,
-  "update_status": "already_current",
-  "generated_at_utc": "2026-08-01T06:46:40Z",
+  "framework_after": "d8a3d306784e0a522e3529fb7eb5d1de6344d6ad",
+  "lock_adopted_commit": "d8a3d306784e0a522e3529fb7eb5d1de6344d6ad",
+  "lock_matches_checkout": true,
+  "update_status": "updated",
+  "generated_at_utc": "2026-08-04T06:11:14Z",
   "claim_boundary": [
     "receipt is review evidence, not proof",
     "no fetch truth is implied unless explicitly recorded",
@@ -30,6 +30,6 @@
     "target_source": "fresh_remote_fetch_head",
     "target_fresh_upstream_verified": true,
     "target_claim_boundary": "fresh upstream target verified; already_current/updated claims are allowed",
-    "target_head": "61111f5fa732b61a12c38ff0b2c0f6e3b4cde287"
+    "target_head": "d8a3d306784e0a522e3529fb7eb5d1de6344d6ad"
   }
 }
