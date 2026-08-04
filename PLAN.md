@@ -23,12 +23,13 @@
 - [x] Adopt the repo-owned governance baseline and classify promotion paths as high risk.
 - [x] Complete the governed F-7 onboarding surfaces and evidence.
 - [x] Deliver one synthetic source-to-approved-reference vertical slice.
+- [x] Package parent and framework Git bundles with offline dependencies and hashes.
 
 ## Backlog
 
 <!-- Required: prioritized items not yet started -->
 
-- P1: Package parent repo and framework bundles for disconnected import.
+- P1: Import the verified package into a disconnected internal test environment.
 - P2: Add a second entry type only after the register-bit pilot exposes a real gap.
 - P3: Add VitePress, MCP, or RAG only after the approved surface is useful without them.
 

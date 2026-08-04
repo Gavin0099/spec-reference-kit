@@ -15,6 +15,24 @@ control, supersedence, and leakage impact differ by customer.
 
 In the connected staging environment:
 
+The repository provides a verified packaging entry point. Run it outside the
+repository so the output directory cannot make the source worktree dirty:
+
+```bash
+python scripts/package_disconnected_bundle.py \
+  --repo spec-reference-kit \
+  --output ../spec-reference-kit-disconnected-v0.1
+```
+
+The command requires clean parent and framework worktrees, verifies that the
+framework lock matches the checked-out submodule commit, creates and verifies
+both Git bundles, downloads binary dependencies into `wheelhouse/`, and writes
+`manifest.json` plus `SHA256SUMS`. The package never includes the external
+Source Vault.
+
+The equivalent individual commands are shown below for troubleshooting or a
+reviewer who needs to inspect each transfer artifact separately:
+
 ```bash
 git -C spec-reference-kit bundle create ../spec-reference-kit-v0.1.bundle --all
 git -C ai-governance-framework bundle create ../ai-governance-framework.bundle --all
