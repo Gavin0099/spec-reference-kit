@@ -1,0 +1,12 @@
+test_bundle_verify_failure_removes_partial_output (tests.test_disconnected_bundle.DisconnectedBundleTests.test_bundle_verify_failure_removes_partial_output) ... ok
+test_dirty_parent_is_rejected_before_output_creation (tests.test_disconnected_bundle.DisconnectedBundleTests.test_dirty_parent_is_rejected_before_output_creation) ... ok
+test_lock_commit_mismatch_is_rejected (tests.test_disconnected_bundle.DisconnectedBundleTests.test_lock_commit_mismatch_is_rejected) ... ok
+test_lock_framework_url_mismatch_is_rejected (tests.test_disconnected_bundle.DisconnectedBundleTests.test_lock_framework_url_mismatch_is_rejected) ... ok
+test_manifest_records_relative_file_hashes_and_sizes (tests.test_disconnected_bundle.DisconnectedBundleTests.test_manifest_records_relative_file_hashes_and_sizes) ... ok
+test_pip_failure_removes_partial_output (tests.test_disconnected_bundle.DisconnectedBundleTests.test_pip_failure_removes_partial_output) ... ok
+test_successful_bundle_orchestration_writes_verified_manifest (tests.test_disconnected_bundle.DisconnectedBundleTests.test_successful_bundle_orchestration_writes_verified_manifest) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.096s
+
+OK

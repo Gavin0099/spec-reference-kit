@@ -1,0 +1,17 @@
+{
+  "receipt_schema": "test_evidence_receipt.v0.1",
+  "status": "report_only",
+  "command": "python -c \"import os, subprocess, sys; os.chdir(r'E:\\BackUp\\Git_EE\\spec-reference-kit'); raise SystemExit(subprocess.call([sys.executable, '-m', 'unittest', 'tests.test_disconnected_bundle', '-v']))\"",
+  "exit_code": 0,
+  "started_at": "2026-08-04T06:50:57Z",
+  "finished_at": "2026-08-04T06:50:58Z",
+  "runner": "copilot",
+  "linked_commit": "8c11e59057d4d31b5ebd8981c3dab4c1d966c536",
+  "output_artifacts": [
+    "artifacts/evidence/test-results/disconnected-bundle-tests.txt"
+  ],
+  "cannot_claim": [
+    "semantic correctness of the tested behavior",
+    "receipt authenticity: every field is fabricatable by a direct writer"
+  ]
+}
