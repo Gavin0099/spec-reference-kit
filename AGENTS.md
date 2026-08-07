@@ -72,6 +72,15 @@ adoption cannot claim: <short cannot-claim list from the summary | NOT REPORTED>
 human_readable_adoption_summary: REPORTED | NOT REPORTED
 ```
 
+### Response Envelope Boundary
+
+- Response envelope contract version: v0.7. Compact human responses are the
+  default.
+- Ordinary expanded reporting has exactly three triggers:
+  `full_evidence_request`, `owner_decision_required`, and `failed_or_partial`.
+- Keep validation commands, counts, and diagnostics under `驗證` or
+  `evidence_refs`; use `注意` only for one decision-relevant limitation.
+
 If the session only updates `AGENTS.md` or other local instruction files, report
 that as an instruction-file update and mark the AI Governance Framework update
 as `not_verified`. Do not collapse instruction-file sync into framework update
@@ -324,13 +333,6 @@ NOT CLAIMED unless separately implemented and validated:
 - For memory completion claims, run `python -m governance_tools.memory_workflow --check --repo . --run-guard` and report blockers before claiming DONE.
 - Use the canonical memory writer for session-derived memory; do not edit memory records as ordinary markdown.
 - Canonical writer signal: `governance_tools.memory_record` / `memory_record.py`.
-- For a non-stateless implementation closeout, create durable test receipts first,
-  then invoke the canonical writer, commit the implementation and memory as
-  separate commits, and only then push. The parent CI memory gate blocks a
-  commit date that has no canonical daily memory record.
-- Treat `.github/hooks/` as wiring only. Verify actual lifecycle installation
-  with `python -m governance_tools.hook_install_validator --repo .`; the CI gate
-  remains the fallback when a platform does not load `session_end`.
 
 ## Repo-Specific Risk Levels
 <!-- governance:key=risk_levels -->
