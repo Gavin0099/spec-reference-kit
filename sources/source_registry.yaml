@@ -11,7 +11,7 @@ sources:
       type: vault_artifact
       artifact_id: DEMO-SPEC-001
       artifact_path: DEMO-SPEC-001/source.txt
-      artifact_sha256: da39f2111929fe3250a262d70eedad00d71e5f07cf2498f8fefb80e72da89c4e
+      artifact_sha256: c23ad8f0ff07c34a14e8a9700271357f5d92144c2ad977c4d513d412c58e2b0d
     authority_level: internal_normative
     classification: synthetic_public_fixture
     supersedes: []

@@ -1,7 +1,7 @@
 schema_version: "0.1"
 receipt_id: REV-DEMO-0001
 proposal_id: demo_reg_0082_bit3
-proposal_sha256: cdbc75b2f714650f10bb406551ce7a5db1721178907e1a9742add1c9ab282b49
+proposal_sha256: f84be89f36a9f235f280ccfe5ec9c65c103fa5f3d88ce14a25d285255807f53b
 reviewer_id: demo_human_reviewer
 reviewer_type: human
 decision: approved

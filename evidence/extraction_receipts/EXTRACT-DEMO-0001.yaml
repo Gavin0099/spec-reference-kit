@@ -1,7 +1,7 @@
 schema_version: "0.1"
 receipt_id: EXTRACT-DEMO-0001
 source_id: demo_internal_spec_r1_0
-artifact_sha256: da39f2111929fe3250a262d70eedad00d71e5f07cf2498f8fefb80e72da89c4e
+artifact_sha256: c23ad8f0ff07c34a14e8a9700271357f5d92144c2ad977c4d513d412c58e2b0d
 locator:
   section: "8.4.2"
   page: 137

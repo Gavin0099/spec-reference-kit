@@ -20,7 +20,7 @@ entries:
         - B0
     source:
       source_id: demo_internal_spec_r1_0
-      artifact_sha256: da39f2111929fe3250a262d70eedad00d71e5f07cf2498f8fefb80e72da89c4e
+      artifact_sha256: c23ad8f0ff07c34a14e8a9700271357f5d92144c2ad977c4d513d412c58e2b0d
       section: "8.4.2"
       page: 137
       table: "Table 8-12"
@@ -39,7 +39,7 @@ entries:
       reviewed_at: "2026-08-01T00:00:00Z"
     promotion:
       proposal_id: demo_reg_0082_bit3
-      proposal_sha256: cdbc75b2f714650f10bb406551ce7a5db1721178907e1a9742add1c9ab282b49
+      proposal_sha256: f84be89f36a9f235f280ccfe5ec9c65c103fa5f3d88ce14a25d285255807f53b
       review_receipt_id: REV-DEMO-0001
       promoted_at: "2026-08-01T00:00:00Z"
 
