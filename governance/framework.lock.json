@@ -1,7 +1,7 @@
 {
   "framework_repo": "https://github.com/Gavin0099/ai-governance-framework.git",
   "adopted_release": "1.2.0",
-  "adopted_commit": "a4f7542832bbca84998852b8195d878763cb2a66",
+  "adopted_commit": "c5f453759409498351d6905ac0562b19221dbf91",
   "framework_interface_version": "1",
   "framework_compatible": ">=1.0.0,<2.0.0",
   "framework_baseline_version": "2026-08-01",
@@ -12,6 +12,6 @@
     "agents_calibration",
     "memory_workflow_router"
   ],
-  "updated_at": "2026-08-07T10:50:29.349416+00:00",
+  "updated_at": "2026-08-10T01:44:23.834511+00:00",
   "claim_boundary": "This lock pins the framework checkout used by this consumer. It does not prove framework correctness, runtime enforcement, domain correctness, or complete governance adoption."
 }
