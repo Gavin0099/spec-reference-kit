@@ -1,0 +1,17 @@
+{
+  "receipt_schema": "test_evidence_receipt.v0.1",
+  "status": "report_only",
+  "command": "C:\\srkimp\\venv\\Scripts\\python.exe C:\\srkimp\\run_synthetic_pilot.py",
+  "exit_code": 0,
+  "started_at": "2026-08-10T02:43:07Z",
+  "finished_at": "2026-08-10T02:43:09Z",
+  "runner": "phase-b-synthetic-register-pilot",
+  "linked_commit": "4ab7df1f5decb1cbd7a7957d0b886f992c3198e4",
+  "output_artifacts": [
+    "artifacts/evidence/test-results/phase-b-synthetic-register-pilot.txt"
+  ],
+  "cannot_claim": [
+    "semantic correctness of the tested behavior",
+    "receipt authenticity: every field is fabricatable by a direct writer"
+  ]
+}

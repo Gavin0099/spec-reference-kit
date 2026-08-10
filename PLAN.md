@@ -2,7 +2,7 @@
 <!-- governance-baseline: overridable -->
 <!-- baseline_version: 1.0.0 -->
 
-> **最後更新**: 2026-08-01
+> **最後更新**: 2026-08-10
 > **Owner**: Gavin0099
 > **Freshness**: Sprint (7d)
 
@@ -24,13 +24,15 @@
 - [x] Complete the governed F-7 onboarding surfaces and evidence.
 - [x] Deliver one synthetic source-to-approved-reference vertical slice.
 - [x] Package parent and framework Git bundles with offline dependencies and hashes.
+- [x] Replay the disconnected bundle import in a short-path isolated smoke environment; evidence: `artifacts/evidence/test-results/phase-b-disconnected-import-smoke.json`.
+- [x] Run a bounded 20-entry synthetic register-bit promotion/generation smoke; evidence: `artifacts/evidence/test-results/phase-b-synthetic-register-pilot.json`.
 
 ## Backlog
 
 <!-- Required: prioritized items not yet started -->
 
-- P1: Import the verified package into a disconnected internal test environment.
-- P2: Add a second entry type only after the register-bit pilot exposes a real gap.
+- P1: Obtain an approved read-only internal Source Vault artifact, fingerprint it, and run the real 20-50 entry register-bit pilot with a domain reviewer.
+- P2: Add a second entry type only after the real register-bit pilot exposes a documented gap.
 - P3: Add VitePress, MCP, or RAG only after the approved surface is useful without them.
 
 ## Decision Log
@@ -59,3 +61,6 @@
 - Human review receipts are attestations, not cryptographic identity proof.
   Mitigation: rely on internal Git identity/branch protection for the pilot and
   evaluate signed receipts only if a real impersonation or audit gap is observed.
+- The local disconnected smoke and synthetic scale pilot do not establish a real
+  internal pilot. Mitigation: keep real Source Vault content outside Git and
+  require domain review before any production-facing promotion.

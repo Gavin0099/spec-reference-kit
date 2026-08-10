@@ -1,0 +1,9 @@
+synthetic_entries=20
+promotions=20
+promotion_seconds=1.059
+promotion_entries_per_second=18.88
+repository_validation=PASS
+generated_output_check=PASS
+source_data=synthetic_fixture_only
+human_review=synthetic_receipts_only
+real_internal_pilot=NOT_CLAIMED
