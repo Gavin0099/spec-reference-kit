@@ -1,0 +1,17 @@
+{
+  "receipt_schema": "test_evidence_receipt.v0.1",
+  "status": "report_only",
+  "command": "python -X utf8 -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "started_at": "2026-08-10T02:37:42Z",
+  "finished_at": "2026-08-10T02:37:42Z",
+  "runner": "phase-b-baseline-validation",
+  "linked_commit": "d75a0cdddae8409ce7bf8f00180ac19177d2cc17",
+  "output_artifacts": [
+    "artifacts/evidence/test-results/phase-b-parent-tests.txt"
+  ],
+  "cannot_claim": [
+    "semantic correctness of the tested behavior",
+    "receipt authenticity: every field is fabricatable by a direct writer"
+  ]
+}
