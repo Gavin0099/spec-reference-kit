@@ -1,0 +1,24 @@
+[spec-reference-validation] PASS
+test_bundle_verify_failure_removes_partial_output (test_disconnected_bundle.DisconnectedBundleTests.test_bundle_verify_failure_removes_partial_output) ... ok
+test_dirty_parent_is_rejected_before_output_creation (test_disconnected_bundle.DisconnectedBundleTests.test_dirty_parent_is_rejected_before_output_creation) ... ok
+test_lock_commit_mismatch_is_rejected (test_disconnected_bundle.DisconnectedBundleTests.test_lock_commit_mismatch_is_rejected) ... ok
+test_lock_framework_url_mismatch_is_rejected (test_disconnected_bundle.DisconnectedBundleTests.test_lock_framework_url_mismatch_is_rejected) ... ok
+test_manifest_records_relative_file_hashes_and_sizes (test_disconnected_bundle.DisconnectedBundleTests.test_manifest_records_relative_file_hashes_and_sizes) ... ok
+test_pip_failure_removes_partial_output (test_disconnected_bundle.DisconnectedBundleTests.test_pip_failure_removes_partial_output) ... ok
+test_successful_bundle_orchestration_writes_verified_manifest (test_disconnected_bundle.DisconnectedBundleTests.test_successful_bundle_orchestration_writes_verified_manifest) ... ok
+test_ai_reviewer_receipt_is_rejected (test_pipeline.PipelineTests.test_ai_reviewer_receipt_is_rejected) ... ok
+test_checked_in_repository_is_valid (test_pipeline.PipelineTests.test_checked_in_repository_is_valid) ... ok
+test_duplicate_promotion_is_rejected (test_pipeline.PipelineTests.test_duplicate_promotion_is_rejected) ... ok
+test_duplicate_yaml_key_is_rejected (test_pipeline.PipelineTests.test_duplicate_yaml_key_is_rejected) ... ok
+test_human_review_receipt_promotes_proposal (test_pipeline.PipelineTests.test_human_review_receipt_promotes_proposal) ... ok
+test_review_receipt_proposal_hash_mismatch_is_rejected (test_pipeline.PipelineTests.test_review_receipt_proposal_hash_mismatch_is_rejected) ... ok
+test_source_hash_mismatch_is_rejected (test_pipeline.PipelineTests.test_source_hash_mismatch_is_rejected) ... ok
+test_source_vault_fingerprint_matches (test_pipeline.PipelineTests.test_source_vault_fingerprint_matches) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.194s
+
+OK
+disconnected_import_smoke=PASS
+manifest_hashes=PASS
+framework_head=a694ddbc601636877f581ee87875ece31ff87af1

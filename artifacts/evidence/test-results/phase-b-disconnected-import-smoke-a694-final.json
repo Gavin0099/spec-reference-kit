@@ -1,0 +1,17 @@
+{
+  "receipt_schema": "test_evidence_receipt.v0.1",
+  "status": "report_only",
+  "command": "C:\\Users\\reiko\\AppData\\Local\\Programs\\Python\\Python313\\python.exe C:\\srkimp\\run_import_smoke.py",
+  "exit_code": 0,
+  "started_at": "2026-08-10T02:53:25Z",
+  "finished_at": "2026-08-10T02:53:26Z",
+  "runner": "phase-b-disconnected-import-a694-final",
+  "linked_commit": "ec3f85e71261b4fcd556cf302329d39eb282fbee",
+  "output_artifacts": [
+    "artifacts/evidence/test-results/phase-b-disconnected-import-smoke-a694-final.txt"
+  ],
+  "cannot_claim": [
+    "semantic correctness of the tested behavior",
+    "receipt authenticity: every field is fabricatable by a direct writer"
+  ]
+}
