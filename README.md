@@ -71,6 +71,8 @@ See [docs/internal-adoption.md](docs/internal-adoption.md) for the disconnected
 internal workflow and [docs/data-flow.md](docs/data-flow.md) for the authority,
 review, and promotion model.
 
+繁中使用說明：[docs/使用說明-zh-TW.md](docs/使用說明-zh-TW.md)
+
 ## Current scope
 
 Included in v0.1:
