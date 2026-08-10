@@ -1,5 +1,44 @@
 # Disconnected internal adoption
 
+## What this feature does
+
+This kit turns a bounded claim from a controlled specification into a
+reviewable reference lookup. It does not copy a specification into Git or let
+an AI answer become canonical on its own.
+
+The data path is:
+
+1. A raw document stays in a read-only Source Vault outside Git.
+2. The source registry records the document identity, scope, revision, locator,
+  and SHA-256 fingerprint.
+3. An extraction receipt records exactly which source surface was read.
+4. An AI or engineer writes a proposal under `proposals/`.
+5. A domain reviewer checks the source, claim scope, and exclusions, then writes
+  a human review receipt.
+6. `scripts/promote_entry.py` accepts the proposal only when all fingerprints
+  and review fields match.
+7. The promoted entry becomes canonical YAML under `tables/`; the manifest and
+  Markdown are generated views of that YAML.
+
+The result is useful for bounded lookups such as register address, bit range,
+encoding, product scope, and silicon revision. It is deliberately not a
+runtime behavior oracle, firmware-support database, certification record, or
+customer-specific override system.
+
+## Three different checks
+
+Keep these outcomes separate:
+
+| Check | What it proves | What it does not prove |
+| --- | --- | --- |
+| Disconnected package smoke | Git bundles, submodule bootstrap, offline dependencies, hashes, and repository startup work in an isolated environment. | That the internal Source Vault or real product data is available. |
+| Synthetic scale smoke | The proposal, review-receipt, promotion, validation, and generation path handles 20 entries using fictional fixtures. | Extraction accuracy, reviewer time, or domain approval. |
+| Real internal pilot | A real bounded source and domain review process produce approved entries with measured quality and review cost. | Runtime firmware behavior, certification, or customer acceptance. |
+
+The public repository currently contains only the first two checks. The real
+pilot must run in a private internal repository with the Source Vault and
+reviewer authority available.
+
 ## Recommended topology
 
 - Mirror `ai-governance-framework` into an internal Git server.
@@ -62,16 +101,34 @@ An internal Git server is preferable to a workstation-only bare repo. The
 `insteadOf` mapping above is a bootstrap option; a reviewed internal
 `.gitmodules` URL is clearer for a long-lived private repository.
 
-## First pilot
+## Real pilot entry gate
+
+Do not start the real pilot until every item below is available:
+
+- an approved read-only Source Vault artifact;
+- a source registry entry with a matching SHA-256;
+- stable section, page, and table locators;
+- extraction receipts for every proposed claim;
+- a named domain reviewer with authority for the source scope;
+- human review receipts with matching proposal fingerprints;
+- an internal repository or transfer location that does not expose raw source
+  documents in this public template.
+
+## Real pilot procedure
 
 1. Register one authoritative source and its SHA-256.
-2. Select one simple table such as register bits, command IDs, or error codes.
+2. Select one low-ambiguity `register_bit` table first.
 3. Extract 20–50 entries with stable page/section/table locators.
 4. Let AI or an engineer create proposals only.
 5. Have a domain reviewer issue review receipts.
 6. Promote through the CLI and generate the approved views.
-7. Measure false extraction, review time, and version-delta handling before
-   adding another entry type.
+7. Record false extraction rate, median review time, rejected fingerprint
+  count, and revision/supersedence handling.
+8. Review the results before adding another entry type.
+
+The current template cannot perform steps 1, 3, or 5 for real data because it
+does not contain an internal Source Vault or a domain reviewer. Its synthetic
+fixtures are useful for process rehearsal only.
 
 Do not start with a full-spec vector database. That creates fast retrieval
 before authority, scope, and supersedence are controlled.
