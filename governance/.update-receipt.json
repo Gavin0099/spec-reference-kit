@@ -5,12 +5,12 @@
   "tool_mode": "apply",
   "repo_root": "E:\\BackUp\\Git_EE\\spec-reference-kit",
   "framework_root": "E:\\BackUp\\Git_EE\\spec-reference-kit\\ai-governance-framework",
-  "framework_before": "c5f453759409498351d6905ac0562b19221dbf91",
-  "framework_after": "a694ddbc601636877f581ee87875ece31ff87af1",
-  "lock_adopted_commit": "a694ddbc601636877f581ee87875ece31ff87af1",
+  "framework_before": "a694ddbc601636877f581ee87875ece31ff87af1",
+  "framework_after": "859445c2bf913741b5a7185637bcb904cad526d1",
+  "lock_adopted_commit": "859445c2bf913741b5a7185637bcb904cad526d1",
   "lock_matches_checkout": true,
   "update_status": "updated",
-  "generated_at_utc": "2026-08-10T02:49:21Z",
+  "generated_at_utc": "2026-11-05T06:11:49Z",
   "claim_boundary": [
     "receipt is review evidence, not proof",
     "no fetch truth is implied unless explicitly recorded",
@@ -24,12 +24,12 @@
     "release readiness"
   ],
   "remote_evidence": {
-    "target_ref": "origin/main",
+    "target_ref": "859445c2bf913741b5a7185637bcb904cad526d1",
     "fetch_remote": "origin",
     "fetch_ref": "main",
-    "target_source": "fresh_remote_fetch_head",
-    "target_fresh_upstream_verified": true,
-    "target_claim_boundary": "fresh upstream target verified; already_current/updated claims are allowed",
-    "target_head": "a694ddbc601636877f581ee87875ece31ff87af1"
+    "target_source": "explicit_target_ref",
+    "target_fresh_upstream_verified": false,
+    "target_claim_boundary": "target resolved from explicit ref without upstream fetch; latest-framework freshness was not verified",
+    "target_head": "859445c2bf913741b5a7185637bcb904cad526d1"
   }
 }

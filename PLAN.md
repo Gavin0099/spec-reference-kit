@@ -2,7 +2,7 @@
 <!-- governance-baseline: overridable -->
 <!-- baseline_version: 1.0.0 -->
 
-> **最後更新**: 2026-08-10
+> **最後更新**: 2026-11-05
 > **Owner**: Gavin0099
 > **Freshness**: Sprint (7d)
 
@@ -47,6 +47,9 @@
   canonical; Markdown and the manifest are deterministic projections.
 - 2026-08-01: Reject duplicate YAML keys rather than accepting PyYAML's default
   last-value-wins behavior; silent overwrite is incompatible with reviewable truth.
+- 2026-11-05: Adopt framework 859445c2 through F-7 (pinned target) to retire the
+  legacy Copilot Stop -> session_end hook, which ran the session-end closeout
+  after every agent turn; sessionStart/sessionEnd stay in ai-governance-copilot.json.
 
 ## Known Risks
 
