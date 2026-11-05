@@ -1,0 +1,4 @@
+# Table and manifest fingerprints are SHA-256 over file bytes; keep YAML LF on
+# every platform so a Windows checkout and a Linux CI checkout hash the same.
+*.yaml text eol=lf
+*.yml text eol=lf

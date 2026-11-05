@@ -113,6 +113,7 @@ def generate_outputs(repo_root: Path, check: bool = False) -> list[str]:
                 mismatches.append(relative.as_posix())
             continue
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(expected, encoding="utf-8")
+        with target.open("w", encoding="utf-8", newline="\n") as stream:
+            stream.write(expected)
     return mismatches
 
