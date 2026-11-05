@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import shutil
 import tempfile
 import unittest
@@ -36,6 +37,24 @@ class PipelineTests(unittest.TestCase):
     def test_checked_in_repository_is_valid(self) -> None:
         self.assertEqual([], validate_repository(REPO_ROOT))
         self.assertEqual([], generate_outputs(REPO_ROOT, check=True))
+
+    def test_manifest_fingerprints_the_lf_table_bytes(self) -> None:
+        # Git stores the table with LF; a fingerprint taken over a CRLF working
+        # copy passes on Windows and fails on every Linux checkout.
+        manifest = load_yaml(REPO_ROOT / "exports" / "governed_surface_manifest.yaml")
+        table_bytes = (REPO_ROOT / "tables" / "register_matrix.yaml").read_bytes()
+        lf_sha = hashlib.sha256(table_bytes.replace(b"\r\n", b"\n")).hexdigest()
+        self.assertEqual(lf_sha, manifest["governed_tables"][0]["sha256"])
+
+    def test_writers_emit_lf_on_every_platform(self) -> None:
+        temp, root = self.make_workspace()
+        with temp:
+            table = root / "tables" / "written.yaml"
+            dump_yaml_atomic(table, {"entries": [{"id": "a"}, {"id": "b"}]})
+            self.assertNotIn(b"\r", table.read_bytes())
+            generate_outputs(root)
+            for relative in ("exports/governed_surface_manifest.yaml", "specs/generated/register-map.md"):
+                self.assertNotIn(b"\r", (root / relative).read_bytes(), relative)
 
     def test_source_vault_fingerprint_matches(self) -> None:
         registry = load_yaml(REPO_ROOT / "sources" / "source_registry.yaml")

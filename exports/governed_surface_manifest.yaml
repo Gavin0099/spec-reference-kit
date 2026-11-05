@@ -11,7 +11,7 @@ governed_tables:
   schema: contract/register_entry.schema.yaml
   state: partial
   approved_entries: 1
-  sha256: cfd62bcaedd91acba229e3ac50d717a4b443b198a8f74ef7db103f83b950c80e
+  sha256: 0af95e5d0a776005d1193299ead8bc93bc7f7d181902f068ca4260d34dbf77c9
 consumer_usage:
   allowed:
   - register_identity_lookup

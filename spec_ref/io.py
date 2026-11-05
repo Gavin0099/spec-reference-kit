@@ -77,9 +77,11 @@ def dump_yaml_text(payload: dict[str, Any]) -> str:
 def dump_yaml_atomic(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     text = dump_yaml_text(payload)
+    # LF on every platform: table fingerprints are taken over these bytes.
     handle = tempfile.NamedTemporaryFile(
         mode="w",
         encoding="utf-8",
+        newline="\n",
         dir=path.parent,
         prefix=f".{path.name}.",
         suffix=".tmp",
